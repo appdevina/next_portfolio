@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background: #181228;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* This is critical - flex container */
+.app-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.glow-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1; /* Push it behind everything */
+    transition: background 0.1s ease-out;
+}
+
+.sidebar-container {
+    position: relative; /* important! */
+}
+
+.sidebar {
+    width: 40%;
+    background: transparent;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #7c7c7c;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a.active {
+    color: white;
+    font-weight: bold;
+    padding-left: 24px;
+    transition: padding-left 0.3s ease;
+}
+
+.content {
+    margin-left: 40%;
+    width: 60%;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 50px 80px;
+    /* box-sizing: border-box; */
+}
+
+.content p {
+    text-align: justify; /* Justify text */
+    margin: 0 auto; /* Center within the container */
+    line-height: 1.5;
+    max-width: 90%; /* Limit width for better readability */
+}
+
+section {
+    /* height: 100vh; */
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+.font-soft-grey {
+    color: #a19bb3;
+}
+.font-soft-purple {
+    color: #b7abd6;
+}
+.font-white {
+    color: rgba(255,255,255, 0.9);
+    font-weight: 500;
+}
+.font-soft-white {
+    color: #dee2eb;
+}
+
+
+/* CARD */
+.experience-card {
+    background: transparent;
+    padding: 20px;
+    max-width: 660px;
+    color: white;
+    margin: 0;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+    box-shadow: 0 6px 30px rgba(37, 26, 57, 0.4);
+    border: 1px solid #1e293b;
+    border-radius: 7px;
+    color: #6125D4;
+    background-color: rgba(39, 25, 63, 0.7);
+}
+
+/* Make the content display in a row */
+.experience-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; /* Space between date and details */
+}
+
+/* Right-side details (acts like col-9 in Bootstrap) */
+.experience-details {
+    flex: 1; /* Takes the remaining space */
+}
+
+.date {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.experience-card:hover .title {
+    color: #C66FF7;
+    transition: all 0.3s ease-in-out;
+
+}
+.experience-card:hover .title .arrow {
+    font-size: 20px;
+    transform: translateY(-5px); /* Move up slightly */
+    transition: all 0.1s ease-in-out; 
+}
+
+.description {
+    padding-top: 10px;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.end-note {
+    padding-top: 70px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.tags {
+    display: flex;
+    color: #C66FF7;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.tags span {
+    background: #2E1E4C;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+/* END CARD */
+
+/* Resume */
+.resume-link {
+    text-decoration: none; /* Removes underline */
+}
+
+.resume-link-white {
+    text-decoration: none; /* Removes underline */
+    color: white;
+}
+
+.resume-link-purple {
+    color: #b7abd6; 
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+    margin-right: 10px;
+}
+
+.resume-link-purple:hover {
+    color: #C66FF7; /* Your desired purple */
+}
+
+.resume-link h3 {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.resume-link:hover h3 {
+    color: #C66FF7; /* Change color on hover */
+}
+
+.project-thumbnail {
+    width: 150px; /* Adjust thumbnail size */
+    height: auto;
+    border-radius: 3px;
+    margin-right: -10px; /* Space between image & text */
+    margin-left: 15px;
+    padding-top: 12px;
+}
+
+/* Social media icons */
+.social-icons {
+    display: flex;
+    gap: 0px;
+    padding-top: 25px;
+}
+
+.social-icons a {
+    color: #94A3B8;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: white;
+}
